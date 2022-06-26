@@ -14,3 +14,13 @@ pub fn puns() -> HashMap<&'static str, &'static str> {
 
     map
 }
+
+pub fn punify(puns: &HashMap<&str, &str>, text: &str) -> String {
+    let mut text = text.to_string();
+
+    for (find, replace) in puns {
+        text = text.replace(find, replace);
+    }
+
+    text
+}
