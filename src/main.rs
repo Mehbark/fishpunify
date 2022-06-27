@@ -1,11 +1,11 @@
-mod parse;
 use itertools::Itertools;
-use parse::puns;
 
 use std::env;
 use std::io::{self, BufRead};
 
-use crate::parse::punify;
+mod parse;
+
+use parse::{punify, puns};
 
 fn main() {
     let mut args = env::args();
